@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEM - Suspicious Activity Logs</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid black; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .danger { background-color: #ffcccc; }
+    </style>
+</head>
+<body>
+    <h2>SIEM - Suspicious Activity Logs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Message</th>
+                <th>Command</th>
+                <th>PID</th>
+                <th>UID</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr class="danger">
+                <td>{{ log.timestamp }}</td>
+                <td>{{ log.message }}</td>
+                <td>{{ log.details.comm }}</td>
+                <td>{{ log.details.pid }}</td>
+                <td>{{ log.details.uid }}</td>
+                <td>{{ log.details.type }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
