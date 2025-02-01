@@ -9,7 +9,7 @@ db = client['audit_logs_db']
 collection = db['audit_logs']
 
 
-log_file_path = "/var/log/audit/audit.log"
+log_file_path = "/var/log/audit/audit.log" # For linux
 
 
 def extract_value(log_line, key):
