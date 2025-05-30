@@ -75,11 +75,3 @@ Visit [**http://127.0.0.1:5000/**](http://127.0.0.1:5000/) to view the Suspiciou
 - ✅ Add **Real-time Log Streaming**.
 - ✅ Integrate with **External Threat Feeds**.
 
-## License
-
-This project is open-source and available under the **MIT License**.
-
-## Contact
-
-For any questions or issues, please contact **Hariharan** at [GitHub](https://github.com/Hariharan-2411).
-
